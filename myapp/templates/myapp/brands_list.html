@@ -1,0 +1,10 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+  {% for brand in brands %}
+    <div>
+      <h2><a href="{% url 'brand_detail' brand_id=brand.id %}">{{ brand.brand_name }}</a></h2>
+      <p>{{ brand.brand_country|linebreaksbr }}</p>
+    </div>
+  {% endfor %}
+{% endblock %}

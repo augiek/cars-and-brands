@@ -1,0 +1,15 @@
+{% extends 'myapp/base.html' %}
+
+{% block content %}
+  <div class="brand">
+    <a class="btn btn-default" href="{% url 'edit_brand' brand_id=brand.id %}"><span class="glyphicon glyphicon-pencil"></span></a>
+    <a class="btn btn-default" href="{% url 'delete_brand' brand_id=brand.id %}"><span class="glyphicon glyphicon-trash"></span></a>
+    <h2>{{ brand.brand_name }}</h2>
+    <p>{{ brand.brand_country|linebreaksbr }}</p>
+    <!-- {% for car in cars %}
+    <div>
+      <h2><a href="{% url 'car_detail' car_id=car.id %}">{{ car.car_name|linebreaksbr }}</a></h2>
+    </div>
+  {% endfor %} -->
+  </div>
+{% endblock %}
